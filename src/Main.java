@@ -1,11 +1,8 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 import java.util.ArrayList;
 
-import java.util.Arrays;
-
-
-public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numOfRolls = 0;
@@ -38,7 +35,7 @@ public class Main {
                 numOfRolls = Integer.parseInt(input);
                 isValidInput = true;
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a whole number.");
+                System.out.println("You did not inout a number :(");
             }
         }
 
@@ -51,17 +48,11 @@ public class Main {
             int DiceNum = (int) (Math.random() * numOFSides) + 1;
             dice.add(DiceNum);
 
-            }
 
-        System.out.println(dice);
+            System.out.println(dice);
 
-        System.out.println("Do you wish to know your highest, median, lowest or average number?");
-        System.out.println("Type highest, median, lowest, average, respectively");
+            System.out.println("Here is your highest, median, lowest or average number");
 
-        String name = scanner.nextLine();
 
-        System.out.println("something idk");
-
-            }
         }
-
+    }
