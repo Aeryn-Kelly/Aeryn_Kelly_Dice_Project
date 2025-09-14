@@ -41,18 +41,22 @@ import java.util.ArrayList;
 
 
         System.out.println("Feeling Lucky? :)");
-
-        ArrayList<Integer> dice = new ArrayList<Integer>();
+        int[] dice = new int[numOfRolls];
 
         for (int j = 0; j < numOfRolls; j++) {
             int DiceNum = (int) (Math.random() * numOFSides) + 1;
-            dice.add(DiceNum);
+            dice[j] = DiceNum;
 
+        }
 
-            System.out.println(dice);
+            System.out.println(Arrays.toString(dice));
 
             System.out.println("Here is your highest, median, lowest or average number");
 
-
+            MathForArray.HighestNum(dice);
+            MathForArray.MedianNum(dice);
+            MathForArray.LowestNum(dice);
+            MathForArray.AverageNum(dice);
         }
-    }
+
+
